@@ -1,4 +1,4 @@
-package com.ppx.cloud.demo.test;
+package com.ppx.cloud.mer.test;
 
 import java.util.Date;
 

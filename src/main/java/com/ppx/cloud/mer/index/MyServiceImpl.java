@@ -1,4 +1,4 @@
-package com.ppx.cloud.demo.index;
+package com.ppx.cloud.mer.index;
 
 import org.springframework.stereotype.Service;
 

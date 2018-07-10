@@ -1,4 +1,4 @@
-package com.ppx.cloud.demo.config;
+package com.ppx.cloud.mer.config;
 
 import java.lang.reflect.Method;
 
