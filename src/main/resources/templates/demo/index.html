@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title></title>
+
+<link th:fragment="base" rel="stylesheet" th:href="@{/static/bootstrap-3.3.7/css/bootstrap.min.css}"/>
+<script type="text/javascript" th:src="@{/static/common/jquery-3.2.1.min.js}"></script>
+<script th:fragment="base" type="text/javascript" th:src="@{/static/bootstrap-3.3.7/js/bootstrap.min.js}"></script>
+
+
+<script type="text/javascript" th:inline="javascript">
+
+
+function exec() {
+	
+	var name = $("#name").val();
+	$.post([[@{/test}]], "name=" + name, function(r) {
+		// var out = JSON.stringify(r);
+		// alert(out);
+		
+		$("#result").val(r.result);
+		
+	});
+}
+
+
+function testJson() {
+	$.ajax({type: "POST",
+        url: [[@{/my/testJsonx}]],
+        contentType: "application/json; charset=utf-8",
+        data:'{"testId":123}',
+        dataType: "json",
+        success: function (r) {
+    		alert(JSON.stringify(r));
+        }
+    });
+}
+
+</script>
+</head>
+<body>
+
+
+<div style="padding:20px;">
+	<div style="width:800px;" class="form-inline">
+		<label>名称:</label>
+		<input type="text" class="form-control input-sm" id="name">
+		<button type="button" class="btn btn-primary btn-sm-new" onclick="exec()">提交</button>
+	</div>
+	
+	<div style="width:300px;" class="form-inline">
+		<label>结果:</label>
+		<textarea id="result" class="form-control" rows="10" cols="100" readonly="readonly"></textarea>
+	</div>
+	
+	
+	<div style="width:800px;" class="form-inline">
+		<button type="button" class="btn btn-primary btn-sm-new" onclick="testJson()">测试JSON</button>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
