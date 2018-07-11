@@ -9,7 +9,7 @@
 	<artifactId>mer</artifactId>
 	
 	<properties>
-		<!-- /mer -->
+		<!-- /contextPath -->
 		<contextPath></contextPath>
 	</properties>
 
