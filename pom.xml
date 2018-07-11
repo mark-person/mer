@@ -5,7 +5,6 @@
 		<groupId>com.ppx.cloud</groupId>
 		<artifactId>base</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath>../base</relativePath>
 	</parent>
 	<artifactId>mer</artifactId>
 	
