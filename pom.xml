@@ -29,7 +29,7 @@
 		
 		<dependency>
 			<groupId>com.ppx.cloud</groupId>
-			<artifactId>base-grant</artifactId>
+			<artifactId>base-auth</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		
