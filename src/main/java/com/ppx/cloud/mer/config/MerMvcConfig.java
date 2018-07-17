@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 
-import com.ppx.cloud.auth.common.GrantInterceptor;
+import com.ppx.cloud.auth.common.AuthInterceptor;
 import com.ppx.cloud.common.config.CommonMvcConfig;
 import com.ppx.cloud.monitor.config.MonitorInterceptor;  
 
@@ -32,7 +32,7 @@ public class MerMvcConfig extends CommonMvcConfig {
 	public void addInterceptors(InterceptorRegistry registry) {
 		super.addInterceptors(registry);
 		registry.addInterceptor(new MonitorInterceptor()).excludePathPatterns("/static/**/*", "/favicon.ico");
-		registry.addInterceptor(new GrantInterceptor()).excludePathPatterns("/static/**/*", "/favicon.ico");
+		registry.addInterceptor(new AuthInterceptor()).excludePathPatterns("/static/**/*", "/favicon.ico");
 	}
 	
 	@Override
